@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>       
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=0.85, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<meta property="og:image" content="https://neocities.org/site_screenshots/45/27/ophanimkei/index.html.540x405.webp">
+<meta name="description" content="find me">
+<meta name="theme-color" content="#f1cbff">
+<meta property="og:image" content="https://neocities.org/site_screenshots/45/27/ophanimkei/index.html.540x405.webp">
+<meta property="og:site_name" content="ophanimkei">
+<meta property="twitter:image:src" content="">
+<meta name="twitter:site" content="ophanimkei.com">
+<meta name="twitter:creator" content="ophanim">
+<meta name="twitter:title" content="welcome to heaven">
+<meta name="twitter:description" content="welcome to heaven">
+<meta name="twitter:card" content="summary_large_image">
+<link href="/style.css" rel="stylesheet" type="text/css" media="all"> 
+<link rel="icon" href="https://ophanimkei.com/images/favicon.png">
+<title>hello purveyors of heaven</title>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>   
+<script src="updateMainFrame.js">
+</script>
+<style>
+
+    body {
+      background-image: url('/images/newlayoutbg.webp');
+      background-size: cover;
+      background-attachment: fixed;
+      height: 100vh;
+    }
+  
+
+    .meatcontainer {
+      background-image: url('/images/meatbg.webp');
+      background-size: 890px;
+      min-height:740px;
+      background-repeat:no-repeat;
+      width: 1000px;
+      margin-top:-8px;
+      overflow-y:hidden;
+      display: block;
+      background-position: center;
+      margin-left: auto;
+      margin-right: auto;
+      z-index: 100;
+    }
+
+    .leftcontainer
+    {
+      width:200px;
+    }
+
+    .statusbox {
+      overflow-y: auto;
+      height: 150px;
+      margin-top:200px;
+      position: absolute;
+      margin-left: 95px;
+      width:140px;
+      z-index: 300;
+    }
+
+    .pagedollbox {
+      margin-top: 458px;
+      margin-left:100px;
+      position: absolute;
+    }
+
+    .middlecontainer
+    {
+      width:370px;
+      margin-top:200px;
+      margin-left:130px;
+      height: 396px;
+      overflow-y:hidden;
+      z-index: 500;
+    }
+
+    /* lastfm widget*/
+
+    .lastfm {
+      margin-top: 185px;
+      margin-left: 78px;
+      height: 130px;
+      width: 100px;
+      margin-left: 84px;
+      overflow-y:auto;
+      margin-bottom:98px;
+    }
+    
+      .tracktitle {
+        font-family: neucha_regular; 
+        overflow-y: hidden;
+        height: 20px;
+      }
+
+
+      .trackartist {
+        font-family: neucha_regular;
+      }
+
+      #trackart {
+        margin:auto;
+        display: block;
+        height: 80px;
+      }
+
+
+      .meatnavbar
+      {
+        margin-top:40px;
+        margin-left: 79px;
+        height: 240px;
+        overflow-y:auto;
+        width: 120px;
+      }
+
+      .tower {
+        background-image: url(/images/tower.webp);
+        background-size: 300px;
+        min-height: 700px;
+        margin-bottom:-20px;
+        min-width: 300px;
+        position: absolute;
+        z-index:-10;
+        bottom: 0px;
+        right: 0px;
+        background-repeat: no-repeat;
+      }
+
+      .lightbulb {
+        background-image: url(/images/lightbulb.webp);
+        background-size: 200px;
+        min-height: 300px;
+        margin-bottom:-20px;
+        width: 300px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-repeat: no-repeat;
+        z-index:-10;
+      }
+
+    </style>
+
+</head>
+<body>
+
+  <div class="lightbulb">
+
+  </div>
+
+  <div class="meatcontainer">
+
+    <div style="display:flex;">
+
+    <div class="leftcontainer">
+
+      <div class="statusbox">
+        <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=ophanimkei" defer></script>
+      </div>
+
+      <div class="pagedollbox">
+        <a href="https://chartreuse.neocities.org/"><img src="/images/me6.gif" title="art by chartreuse" height="170"px;></a>
+      </div>
+
+    </div>
+
+    <div class="middlecontainer">
+      <iframe id="home" name="home"  src="/start/landing.html" height="100%" width="100%" scrolling="yes" style="border: none;"></iframe>
+    </div>
+
+    <div class="rightcontainer">
+      <div class="lastfm">
+        <center>
+        <div class="nowplayingcard">
+          <img id="trackart" src="#">
+          <div class="trackInfo">
+            <a id="tracktitle"></a> by
+            <a href="#" id="trackartist"></a>
+          </div>
+      </div>
+      </center>
+    </div>
+
+    <div class="meatnavbar">
+      
+                   
+      <img src="/images/wingies.webp" > <a href="/start/landing.html" target="home" onclick="top.location.hash='#landing'">landing</a><br>
+      <img src="/images/wingies.webp" > <a href="/start/neighborhood.html" target="home" onclick="top.location.hash='#neighborhood'"> neighborhood </a><br>
+      <img src="/images/wingies.webp" > <a href="/start/links.html" target="home" onclick="top.location.hash='#links'">links </a><br>
+      <img src= "/images/wingies.webp" > <a href="/start/collections.html" target="home" onclick="top.location.hash='#collections'"> collections </a><br>
+      <img src= "/images/wingies.webp" > <a href="/start/projects.html" target="home" onclick="top.location.hash='#projects'"> projects</a><br>
+      <img src= "/images/wingies.webp" > <a href="/start/interact.html" target="home" onclick="top.location.hash='#interact'"> interact</a><br>
+      <img src= "/images/wingies.webp" > <a href="/start/statuses.html" target="home" onclick="top.location.hash='#statuses'"> statuses</a><br>
+      <img src= "/images/wingies.webp" > <a href="/start/map.html" target="home" onclick="top.location.hash='#sitemap'"> site map</a><br>
+    
+
+      <br>
+
+      <b>PERSONAL</b> <img src="/images/eyeball.webp" ;><br>
+      <img src="/images/wingies.webp" > <a href="/personal/webmistress.html">webmistress</a><br>
+      <img src="/images/wingies.webp" > <a href="/personal/askbox.html">askbox</a><br>
+      <img src="/images/wingies.webp" > <a href="/personal/library.html">media log</a><br>
+      <img src="/images/wingies.webp" > <a href="/personal/diary/index.html">diary</a><br>
+      <img src="/images/wingies.webp" > <a href="/personal/zed.html">my friend zed</a><br>
+      <img src="/images/wingies.webp" > <a href="/personal/lolita/index.html">EGL</a><br>
+      <img src="/images/wingies.webp" > <a href="/personal/misanthropy.html">misanthropy drivel</a><br>
+
+
+      <br>
+      
+      <b>MEDIA</b> <img src="/images/eyeball.webp" ; ><br>
+      <img src="/images/wingies.webp" > <a href="/media/uzumaki.html"> Uzumaki and Psychosis</a><br>
+      <img src="/images/wingies.webp" > <a href="/media/tunes.html"> Tunes</a><br>
+      <img src="/images/wingies.webp" > <a href="/media/ritsuko.html">Ritsuko Akagi</a><br>
+      <img src="/images/wingies.webp" > <a href="/media/recommendations.html">Reccs</a><br>
+      <img src="/images/wingies.webp" > <a href="/media/confessions/index.html">Yaoi Confessions 18+</a><br>
+      
+      <br>
+      
+
+      
+      <b>GAMES</b> <img src="/images/eyeball.webp" > <br>
+      <img src= "/images/wingies.webp" > <a href="https://ophanimkei.com/sweetdreams/mall">MALL</a><br>
+      <img src= "/images/wingies.webp" > <a href="https://ophanimkei.com/art/devilsfood">Devil's Food</a><br>
+      <img src= "/images/wingies.webp" > <a href="https://ophanimkei.com/art/ommatophilia">Ommatophilia</a><br>
+
+      <br>
+
+      
+      
+      <b>ART</b> <img src="/images/eyeball.webp" > <br>
+      <img src= "/images/wingies.webp" > <a href="/art/archive.html"> archive</a><br>
+      <img src= "/images/wingies.webp" > <a href="/oc/aminas.html"> aminas</a><br>
+      <img src= "/images/wingies.webp" > <a href="/oc/cakes.html"> cakes</a><br>
+      <img src= "/images/wingies.webp" > <a href="/oc/eleanor.html"> eleanor</a><br>
+      <img src= "/images/wingies.webp" > <a href="/art/ymmshiwtkm/"> ymmshiwtkm</a><br>
+  
+      <br>
+
+      <b>YOU</b> <img src="/images/eyeball.webp" ;><br>
+      <img src="/images/wingies.webp" > <a href="/you/usakumya.html">Usakumya Cult</a><br>
+      <img src="/images/wingies.webp" > <a href="/you/RPGmaker"> RPG Maker Webring</a><br>
+      <img src="/images/wingies.webp" > <a href="/you/dreamteam.html"> Dream Team Clique</a><br>
+      <img src="/images/wingies.webp" > <a href="/you/abe.html"> Yoshitoshe Fanlisting</a><br>
+   
+     
+     <br>
+         
+       <b>OUTGOING</b> <img src="/images/eyeball.webp" ><br>
+        <img src= "/images/wingies.webp" > <a href="https://art.ophanimkei.com/"> portfolio</a><br>
+        <img src="/images/wingies.webp" >  <a href="https://www.patreon.com/ophanimkei">patreon</a><br>
+        <img src="/images/wingies.webp" > <a href="https://ophanimkei.tumblr.com/">tumblr</a><br>
+        <img src="/images/wingies.webp" > <a href="https://cohost.org/ophanimkei">cohost</a><br>
+        <img src="/images/wingies.webp" > <a href="https://twitter.com/ophanimkei">twitter</a><br>
+        <img src="/images/wingies.webp" > <a href="https://artfight.net/~ophanimkei">artfight</a><br>
+        <img src="/images/wingies.webp" > <a href="https://neocities.org/site/ophanimkei">profile</a><br>
+        <img src="/images/wingies.webp" > <a href="https://rpgmaker.cafe/users/ophanimkei">fedi</a><br>
+        <img src="/images/wingies.webp" > <a href="https://bsky.app/profile/ophanimkei.bsky.social">bluesky</a><br>
+    </div>
+
+    <div class="tower">
+
+    </div>
+
+    </div>
+  </body>
+      
+<script>
+      /**
+  Developed by Prashant Shrestha
+  + https://prashant.me
+*/
+var lastfmData = {
+  baseURL:
+    "https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=",
+  // Your Last.fm Username
+  user: "malakhims",
+  // Your API key
+  api_key: "fcf97716eec184d15cda7e1bba1c9650",
+  additional: "&format=json&limit=1"
+};
+
+var getSetLastFM = function() {
+  $.ajax({
+    type: "GET",
+    url:
+      lastfmData.baseURL +
+      lastfmData.user +
+      "&api_key=" +
+      lastfmData.api_key +
+      lastfmData.additional,
+    dataType: "json",
+    success: function(resp) {
+      var recentTrack = resp.recenttracks.track[0];
+      var formatted =
+        recentTrack.name;
+      $("a#tracktitle")
+        .html(formatted)
+        .attr("href", recentTrack.url)
+        .attr("title", recentTrack.name + " by " + recentTrack.artist["#text"])
+        .attr("target", "_blank");
+
+      var artistFormatted =
+        recentTrack.artist["#text"];
+      $("a#trackartist")
+        .html(artistFormatted)
+        .attr("title", "Artist : " + recentTrack.artist["#text"]);
+      $("img#trackart").attr("src", recentTrack.image[2]["#text"]);
+    },
+    error: function(resp) {
+      $("a#tracktitle").html(
+      );
+      $("img#trackart").attr("src", "https://i.imgur.com/Q6cCswP.webp");
+      var artistFormatted =
+      $("a#trackartist")
+        .html(artistFormatted)
+        .attr("href", "www.prashant.me/");
+    }
+  });
+};
+
+// Get the new one.
+getSetLastFM();
+// Start the countdown.
+setInterval(getSetLastFM, 10 * 1000);  
+</script>
+</html>

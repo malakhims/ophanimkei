@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <atom:link href="https://ophanimkei.com/feed.xml" rel="self" type="application/rss+xml" />
+    <title>rss feed</title>
+    <link>https://ophanimkei.com/</link>
+    <description>ophanimkei's updates</description>
+    <language>en-us</language>    
+    <!-- Anchor -->
+    
+         <item>
+              <title>4.12.23 | combined media logs, updated diary, updated tunes</title>
+                <pubDate>Fri, 09 Feb 2024 20:19:40 +0000</pubDate>
+                <link>https://ophanimkei.com/personal/library</link>
+                <description>Cleared old RSS entries since the links are probably mostly broken now (sorry archivists). 
+                I got behind on some stuff and have been moving things around. 
+                Reading/playing/tunes page has all been updated with a minimalist uniform look (css animations :O). 
+                - I've added my thoughts on a Mal Blum album.. 
+                - I also updated my diary at some point earlier this april (i know it says 4/22 which is obviously incorrect) 
+                - Hopefully more updates this month.. Exploring nekoweb has me on a bit of a kick.
+                </description>
+            </item>
+    
+  </channel>
+</rss>

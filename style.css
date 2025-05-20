@@ -1,0 +1,407 @@
+/*GENERAL CSS*/
+
+body {
+  color: #685275;
+  font-family: neucha_regular; 
+  background-repeat: repeat;
+  background-size: 700px;
+  height: 100vh;
+}
+
+body { cursor: url("/images/cursor2.gif") 0 0,  default; }
+
+ a {
+        cursor: url("/images/cursor2.gif") 0 0,  default;}
+
+p {
+  font-family: neucha_regular;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+    font-family: neucha_regular;
+    color: #907389;
+    font-size: 25px;
+    margin-bottom: -4px;
+    
+}
+
+h2 {
+    font-family: neucha_regular;
+    color: #907389;
+    font-size: 17px;
+    margin-bottom: -4px;
+    
+}
+
+.a:link
+{
+color: #8eaaa3;
+}
+
+
+.a:visited
+{
+color: #809888;
+}
+
+.wrap
+{
+    width: 1000px;
+    margin: auto;
+    display: inline-block;
+}
+
+.wrap2
+{
+    max-width: 600px;
+    margin: auto;
+}
+
+.wraplinks
+{
+    width: 681px;
+    margin-left: 600px;
+    display:inline-block;
+}
+
+
+@font-face {
+    font-family: 'indie_flowerregular';
+    src: url('fonts/indieflower-regular-webfont.woff2') format('woff2'),
+         url('fonts/indieflower-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neucha_regular';
+    src: url('fonts/neucha-regular-webfont.woff2') format('woff2'),
+         url('fonts/neucha-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'Dadhand';
+  src: url(/fonts/dadha___.ttf);
+  }
+
+@font-face {
+  font-family: '5Years';
+  src: url(/fonts/5yearsoldfont.ttf);
+  }
+
+
+@font-face {
+  font-family: 'Adorable Doll';
+  src: url(/fonts/AdorableDoll.ttf);
+  }
+
+@font-face {
+  font-family: 'Adabelle';
+  src: url(/fonts/AdabelleHandwriting-Regular.ttf);
+  }
+
+@font-face {
+  font-family:'Cake';
+  src: url(/fonts/cakentruffles.ttf);
+}
+
+
+/*ART CSS*/
+
+
+
+.artwrap
+{
+  display:inline;
+}
+
+.artcontent
+{
+  display:inline-block;
+  height: 520px;
+  overflow-y: auto;
+  font-size:1em;
+  overflow-x:hidden;
+  padding-right:2rem;
+  vertical-align: top;
+
+}
+
+
+.artnavbar
+{
+  display:inline-block;
+  height: 520px;
+  width:30%;
+  overflow-y: auto;
+  font-size:1em;
+  overflow-x:hidden;
+  padding-left:2rem;
+  vertical-align: top;
+  border: black;
+  border-width: 1px;
+
+}
+  .artcenter 
+  {
+    display:inline-block;
+    height:499px;
+    width:70%;
+    overflow-y: auto;
+    font-size:1em;
+    overflow-x:hidden;
+    padding-right:.1rem;
+    vertical-align: top;
+    margin-top:1.2rem;
+  } 
+
+  .merch
+{
+  position: relative;
+  border: 5px rgb(0, 0, 0);
+  border-style:groove;
+  background-color:#faf8ff;
+  background-size:100;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  margin-top:12px;
+  margin-right: 2px;
+  margin-left: 2px;
+  vertical-align:top;
+  border-radius: 0px;
+  width:60%;
+  height: 450px;
+  padding:.8em;
+  line-height:1.5em;
+  margin-bottom: 2px;
+  margin-top:30px;
+    
+}
+
+.merchcontent
+{
+  display:inline-block;
+  height: 400px;
+  width:100%;
+  overflow-y: auto;
+  font-size:1em;
+  overflow-x:hidden;
+  padding-right:2rem;
+  vertical-align: top;
+
+}
+
+#statuscafe {
+  padding: .5em;
+  margin-top: -10px;
+  text-align: left;
+}
+
+
+
+.warningforgladospage
+{
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+
+
+
+.cbox {
+  left: 40px;
+  bottom: -305px;
+  z-index: 9999;
+  position: fixed;
+  border: 3px none #c26c7db4;
+  background-color: rgba(255, 255, 255, 0.622);
+  border-radius: 28% 15% 0% 0% / 7% 13% 19% 50%;
+}
+
+.cbox:hover {
+  bottom: 0;
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.cboxtitle {
+  width: 190px;
+  height: 15px;
+  background-color: #a0527cb5;
+  padding: 8px 5px 5px 5px;
+  border-radius: 28% 15% 0% 0% / 7% 13% 19% 50%;
+  text-align: center;
+  color: #000000;
+  text-shadow: 1px 1px 1px #ffffff;
+
+    /* Add this vendor-prefixed code for Safari */
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translateZ(0);
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #b7b7b754;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #90909085;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b362;
+  }
+
+/*ENCYCLOPEDIA CONTENT*/
+
+.almanac
+{
+  z-index: 1;
+  position: relative;
+  vertical-align:top;
+  border-radius: 0px;
+  width: 600px;
+  height: 600px;
+  line-height:1.5em;
+  margin-bottom: 2px;
+  overflow-y: auto;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+  background-image: url(/images/crtmonitor.webp);
+  background-size: 700px;
+  padding-top: 60px;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-bottom: 40px;
+}
+
+.almanaccontents
+{
+  height: 420px;
+  width: 520px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+  overflow-y: auto;
+}
+
+.almanacflex
+{
+  display: flex;
+}
+
+.almanac h1
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+.almanac h2
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.almanac p
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.almanaccontents h1
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+.almanaccontents h2
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.almanaccontents p
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.almanacflex h1
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+.almanacflex h2
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.almanacflex p
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.almanaccontent h1
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+.almanaccontent h2
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+.almanaccontent p
+{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+
+
+.almanacwrap
+{
+  display:flex;
+}
+
+.almanaccontent
+{
+  overflow-y: auto;
+  width: 50%;
+}
+
+.almanaccontent2
+{
+  overflow-y: auto;
+  width:40%;
+  display: inline-block;
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.almanaccontent3
+{
+  width: 90%;
+  display: block;
+  padding-left:20px;
+}

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>    
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <title>.</title>
+  <meta name="description" content="find me on the web">
+  <link rel="icon" href="ophanimkei.com/images/favicon.png">
+  <script src="https://kit.fontawesome.com/f936906ae0.js" crossorigin="anonymous"></script>
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all"> 
+
+        <style>
+            html, body {
+              background-image: url(/images/bgcoffins.webp);
+              background-size: 400px;
+              background-position: bottom;
+              background-repeat:repeat-x;
+              color: rgb(0, 0, 0);
+              font-family: 'Courier New', Courier, monospace;
+              font-size: 15px;
+              background-attachment: fixed;
+              background-color: rgb(0, 0, 0);
+              overflow-y: hidden;
+            }
+
+            p {
+              color: black;
+              font-family: 'Courier New', Courier, monospace;
+              font-size: 15px;
+            }
+
+            h1 {
+              color: black;
+              font-family: Adorable Doll;
+              font-size: 23px;
+              color: rgb(200, 194, 156);
+            }
+
+            @font-face {
+            font-family: Adorable Doll;
+            src: url(https://dl.dropbox.com/s/plehp3a9xbtct7n/AdorableDoll.ttf);
+            }
+
+            .display {
+              color:white;
+            }
+            
+            .display1 {
+              color:white;
+            }
+
+            a .widget {
+            color: white;
+            }
+
+            a .widget :visited {
+            color: white;
+            }
+
+            a .display {
+            color: white;
+            }
+
+            a .display :visited {
+            color: white;
+            }
+
+            #musicplayer{
+            background:rgb(62, 62, 62); /* background color of player */
+            border:2px solid #141414; /* border around player */
+            width:200px; /* width of the player */
+            position: fixed;
+            left: 12px; 
+            bottom: 10px; 
+            z-index: 100;
+            }
+
+            .songtitle{
+                padding:5px; /* padding around song title */
+                border-bottom:2px solid #141414; /* border under song title */
+                display:block;
+                color: #e6d8ac;
+            }
+
+            .controls{
+                font-size:18px !important; /* size of controls */
+                background-color:#0a0a0a; /* background color of controls */
+                text-align:center;
+                width:100%;
+            }
+
+            .controls td{
+                padding:8px 5px 0px 5px; /* padding around controls */
+            }
+
+            .seeking{
+                background-color:#0a0a0a; /* background color of seeking bar */
+                display:flex;
+                justify-content: space-evenly;
+                padding:5px; /* padding around seeking bar */
+            }
+
+            .current-time{
+                padding-right:5px;
+            }
+
+            .total-duration{
+                padding-left:5px;
+            }
+
+            i.fas:hover{
+                cursor:help;
+            }
+
+            i.fas.fa-pause, i.fas.fa-play, i.fas.fa-forward, i.fas.fa-backward{
+                color:#e6d8ac; /* color of controls */
+            }
+            
+            input[type=range] {
+                -webkit-appearance: none;
+                width: 100%;
+                background-color:#0a0a0a; /* background color of seeking bar - make the color same as .seeking background color */
+            }
+            
+            input[type=range]:focus {
+                outline: none;
+            }
+            
+            /* settings for chrome browsers */
+            input[type=range]::-webkit-slider-runnable-track {
+                width: 100%;
+                height: 2px; /* thickness of seeking track */
+                cursor: help;
+                background: #e6d8ac; /* color of seeking track */
+            }
+            
+            input[type=range]::-webkit-slider-thumb {
+                height: 10px; /* height of seeking square */
+                width: 10px; /* width of seeking square */
+                border-radius: 0px; /* change to 5px if you want a circle seeker */
+                background: #e6d8ac; /* color of seeker square */
+                cursor: help;
+                -webkit-appearance: none;
+                margin-top: -4.5px; 
+            }
+            
+            /* settings for firefox browsers */
+            input[type=range]::-moz-range-track {
+                width: 100%;
+                height: 2px; /* thickness of seeking track */
+                cursor: help;
+                background: #e6d8ac; /* color of seeking track */
+            }
+            
+            input[type=range]::-moz-range-thumb {
+                height: 10px; /* height of seeking square */
+                width: 10px; /* width of seeking square */
+                border-radius: 0px; /* change to 5px if you want a circle seeker */
+                background: #e6d8ac; /* color of seeker square */
+                cursor: help;
+                border:none;
+            }
+
+            
+.diarywrap
+{
+  width:300px;
+  display:inline-block;
+}
+
+.diaryside
+{
+  width: 201px;
+  height: 535px;
+  display: inline-block;
+  margin-left: -23px;
+  border: black;
+  border-style: solid;
+  border-width: 2px;
+  background-color: white;
+}
+
+.diary
+{
+  z-index: 1;
+  display:inline-block;
+  vertical-align:top;
+  width: 460px;
+  line-height:1.5em;
+  overflow-y:auto;
+  height: 535px;
+  background-color: white;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  overflow-x: hidden;
+  border-right: none;
+  margin-right:16px;
+
+}
+
+.diarycontent
+{
+  z-index: 1;
+  display:inline-block;
+  vertical-align:top;
+  border-radius: 0px;
+  padding-right:20px;
+  padding-left:20px;
+  border: none;
+  background: transparent;
+  overflow-x: hidden;
+  height:auto;
+}
+
+.diaryicon
+{
+  background-color: white;
+  width: 180px;
+  overflow-y: hidden;
+}
+
+
+.diaryicon2
+{
+  background-color: white;
+  width: 99%;
+  height: 310px;
+  border: black;
+  border-top: black;
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+  border-width: 2px;
+  border-top-style: solid;
+  overflow-y: auto;
+}
+                  
+        </style>
+
+      <script type="text/javascript">
+        function resizeIframe(obj){
+          obj.style.height = 0;
+          obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+      </script>
+      <script src="/updateMainFrame.js"></script>
+      
+  
+
+      
+        </head>
+  
+
+<body>
+  <center>
+
+    <h1 style="margin-bottom:2px;">a lolita's diary</h1>
+    
+      <div class="diary">
+        <iframe id="target" name="diary"  src="/personal/diary/intro.html" frameborder="0" scrolling="yes"  width="97%" height="528px"></iframe>
+
+    </div>
+    <div class="diaryside">   
+      <div class="diaryicon">
+        <a href="https://shivaflwrs.neocities.org/"><img src="/images/me7.webp" height=210px; title="art by uwuboa"></a><br>
+      </div>
+
+      <div class="diaryicon2">
+        <a href="/personal/diary/feb2025.html" target="diary" style="color:black;" onclick="top.location.hash='#february2025'"> February 2025</a><br>
+        <a href="/personal/diary/jan2025.html" target="diary" style="color:black;" onclick="top.location.hash='#january2025'"> January 2025</a><br>
+        <a href="/personal/diary/dec2024.html" target="diary" style="color:black;" onclick="top.location.hash='#december2024'"> December 2024</a><br>
+        <a href="/personal/diary/nov2024.html" target="diary" style="color:black;" onclick="top.location.hash='#november2024'"> November 2024</a><br>
+        <a href="/personal/diary/oct2024.html" target="diary" style="color:black;" onclick="top.location.hash='#october2024'"> October 2024</a><br>
+        <a href="/personal/diary/sept2024.html" target="diary" style="color:black;" onclick="top.location.hash='#september2024'"> September 2024</a><br>
+        <a href="/personal/diary/august2024.html" target="diary" style="color:black;" onclick="top.location.hash='#august2024'"> August 2024</a><br>
+        <a href="/personal/diary/july2024.html" target="diary" style="color:black;" onclick="top.location.hash='#july2024'"> July 2024</a><br>
+        <a href="/personal/diary/june2024.html" target="diary" style="color:black;" onclick="top.location.hash='#june2024'"> June 2024</a><br>
+        <a href="/personal/diary/may2024.html" target="diary" style="color:black;" onclick="top.location.hash='#may2024'"> May 2024</a><br>
+        <a href="/personal/diary/april2024.html" target="diary" style="color:black;" onclick="top.location.hash='#april024'"> April 2024</a><br>
+        <a href="/personal/diary/march2024.html" target="diary" style="color:black;" onclick="top.location.hash='#march2024'"> March 2024</a><br>
+        <a href="/personal/diary/feb2024.html" target="diary" style="color:black;" onclick="top.location.hash='#february2024'"> February 2024</a><br>
+        <a href="/personal/diary/jan2024.html" target="diary" style="color:black;" onclick="top.location.hash='#january2024'"> January 2024</a><br>
+        <a href="/personal/diary/dec2023.html" target="diary" style="color:black;" onclick="top.location.hash='#december2023'"> December 2023</a><br>
+        <a href="/personal/diary/nov2023.html" target="diary" style="color:black;" onclick="top.location.hash='#november2023'"> November 2023</a><br>
+        <a href="/personal/diary/oct2023.html" target="diary" style="color:black;" onclick="top.location.hash='#october2023'"> October 2023</a><br>
+        <a href="/personal/diary/sept2023.html" target="diary" style="color:black;" onclick="top.location.hash='#september2023'"> September 2023</a><br>
+        <a href="/personal/diary/august2023.html" target="diary" style="color:black;" onclick="top.location.hash='#august2023'"> August 2023</a><br>
+        <a href="/personal/diary/july2023.html" target="diary" style="color:black;" onclick="top.location.hash='#july2023'"> July 2023</a><br>
+        <a href="/personal/diary/june2023.html" target="diary" style="color:black;" onclick="top.location.hash='#june2023'"> June 2023</a><br>
+        <a href="/personal/diary/may2023.html" target="diary" style="color:black;" onclick="top.location.hash='#may2023'"> May 2023</a><br>
+        <a href="/personal/diary/april2023.html" target="diary" style="color:black;" onclick="top.location.hash='#april2023'"> April 2023</a><br>
+        <a href="/personal/diary/march2023.html" target="diary" style="color:black;" onclick="top.location.hash='#march2023'"> March 2023</a><br>
+         <a href="/personal/diary/feb2023.html" target="diary" style="color:black;" onclick="top.location.hash='#february2023'"> February 2023</a><br>
+         <a href="/personal/diary/jan2023.html" target="diary" style="color:black;" onclick="top.location.hash='#january2023'"> January 2023</a><br>
+         <a href="/personal/diary/dec2022.html" target="diary" style="color:black;" onclick="top.location.hash='#december2022'"> December 2022</a><br>
+         <a href="/personal/diary/nov2022.html" target="diary" style="color:black;" onclick="top.location.hash='#november2022'"> November 2022</a><br>
+         <a href="/personal/diary/oct2022.html" target="diary" style="color:black;" onclick="top.location.hash='#october2022'"> October 2022</a><br>
+         <a href="/personal/diary/sept2022.html" target="diary" style="color:black;" onclick="top.location.hash='#september2022'"> September 2022</a><br>
+         <a href="/personal/diary/august2022.html" target="diary" style="color:black;" onclick="top.location.hash='#august2022'"> August 2022</a><br>
+         <a href="/personal/diary/july2022.html" target="diary" style="color:black;" onclick="top.location.hash='#july2022'"> July 2022</a><br>
+         <a href="/personal/diary/june2022.html" target="diary" style="color:black;" onclick="top.location.hash='#june2022'"> June 2022</a><br>
+         <a href="/personal/diary/may2022.html" target="diary" style="color:black;" onclick="top.location.hash='#may2022'"> May 2022</a><br>
+         <a href="/personal/diary/april2022.html" target="diary" style="color:black;" onclick="top.location.hash='#april2022'"> April 2022</a><br>
+         <a href="/personal/diary/march2022.html" target="diary" style="color:black;" onclick="top.location.hash='#march2022'"> March 2022</a><br>
+         <a href="/personal/diary/feb2022.html" target="diary" style="color:black;" onclick="top.location.hash='#february2022'"> February 2022</a><br>
+         <a href="/personal/diary/jan2022.html" target="diary" style="color:black;" onclick="top.location.hash='#january2022'"> January 2022</a><br>
+         <a href="/personal/diary/dec2021.html" target="diary" style="color:black;" onclick="top.location.hash='#december2021'"> December 2021</a><br>
+         <a href="/personal/diary/nov2021.html" target="diary" style="color:black;" onclick="top.location.hash='#november2021'"> November 2021</a><br>
+         <a href="/personal/diary/oct2021.html" target="diary" style="color:black;" onclick="top.location.hash='#october2022'"> October 2021</a><br>
+         <a href="/personal/diary/sept2021.html" target="diary" style="color:black;" onclick="top.location.hash='#september2021'"> September 2021</a><br>
+         <a href="/personal/diary/august2021.html" target="diary" style="color:black;" onclick="top.location.hash='#august2021'"> August 2021</a><br>
+         <a href="/personal/diary/july2021.html" target="diary" style="color:black;" onclick="top.location.hash='#july2021'"> July 2021</a><br>
+        
+      </div>
+
+      </div>
+      </center>
+
+
+      <div id="musicplayer">
+        <div>
+            <marquee scrollamount="8" class="songtitle"></marquee>
+        </div>
+
+        <table class="controls">
+            <tr>
+                <td>
+                    <div class="prev-track" onclick="prevTrack()"><i class="fas fa-backward"></i></div>
+                </td>
+                <td>
+                    <div class="playpause-track" onclick="playpauseTrack()" ><i class="fas fa-play"></i></div>
+                </td>
+                <td>
+                    <div class="next-track" onclick="nextTrack()"><i class="fas fa-forward"></i></div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="seeking">
+            <div class="current-time">00:00</div>
+
+            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+
+            <div class="total-duration">0:00</div>
+        </div>
+
+        <audio id="music" src=""></audio> 
+    </div>
+
+
+      
+</div>
+
+<center>
+</center>
+<br><br>
+
+  
+<script>
+  // initiate variables
+  let track_name = document.querySelector(".songtitle");
+
+  let playpause_btn = document.querySelector(".playpause-track");
+  let next_btn = document.querySelector(".next-track");
+  let prev_btn = document.querySelector(".prev-track");
+
+  let seek_slider = document.querySelector(".seek_slider");
+  let curr_time = document.querySelector(".current-time");
+  let total_duration = document.querySelector(".total-duration");
+
+  let track_index = 0;
+  let isPlaying = false;
+  let updateTimer;
+  
+  // create new audio element
+  let curr_track = document.getElementById("music");
+  
+  //
+  // Define songs here
+  let track_list = [
+      {
+          name: "weeevildoing - I Want A Lobotomy",
+          path: "https://ophanimkei.com/audio/weevildoing_lobotomy.mp3",
+      },
+      {
+          name:"D<E<A<T<H<M<E<T<A<L - Panchiko",
+          path:"https://ophanimkei.com/audio/01%20-%20D_E_A_T_H_M_E_T_A_L.ogg"
+      },
+      {
+          name: "Genica Pussy Willow - Lalleshwari",
+          path: "https://ophanimkei.com/audio/Genica%20Pussy-Willow.flac",
+      },
+      {
+          name: "Laputa - Panchiko",
+          path: "https://ophanimkei.com/audio/03%20-%20Laputa.flac",
+      },
+      {
+          name: "Under Your Command - Stina Nordenstam",
+          path: "https://ophanimkei.com/audio/01_Under_Your_Command.mp3",
+      },
+      {
+          name: "My Sister Says the Saddest Things - Grimes",
+          path: "https://ophanimkei.com/audio/My%20Sister%20Says%20The%20Saddest%20Things.flac",
+      },
+      {
+          name: "Do You Remember Those Old TV Shows - Corn Wave",
+          path: "https://ophanimkei.com/audio/corn_wave_-_philosophy_of_structures_-_13_do_you_remember_those_old_tv_shows.flac",
+      },
+      {
+          name:"weevildoing - vomitsoup",
+          path:"https://ophanimkei.com/audio/weevildoing_vomitsoup.mp33"
+      },
+  ];
+  //
+  //
+  //
+  //
+  //
+
+  function loadTrack(track_index) {
+      clearInterval(updateTimer);
+      resetValues();
+
+      // load a new track
+      curr_track.src = track_list[track_index].path;
+      curr_track.load();
+      
+      // update details of the track
+      track_name.textContent = "playing " + (track_index + 1) + " of " + track_list.length + ": " + track_list[track_index].name;
+
+      // set an interval of 1000 milliseconds for updating the seek slider
+      updateTimer = setInterval(seekUpdate, 1000);
+      
+      // move to the next track if the current one finishes playing 
+      curr_track.addEventListener("ended", nextTrack);
+  }
+
+  // reset values
+  function resetValues() {
+      curr_time.textContent = "0:00";
+      total_duration.textContent = "0:00";
+      seek_slider.value = 0;
+  }
+
+  // checks if song is playing
+  function playpauseTrack() {
+      if (!isPlaying) playTrack();
+      else pauseTrack();
+  }
+
+  // plays track when play button is pressed
+  function playTrack() {
+      curr_track.play();
+      isPlaying = true;
+      
+      // replace icon with the pause icon
+      playpause_btn.innerHTML = '<i class="fas fa-pause"></i>';
+  }
+
+  // pauses track when pause button is pressed
+  function pauseTrack() {
+      curr_track.pause();
+      isPlaying = false;
+      
+      // replace icon with the play icon
+      playpause_btn.innerHTML = '<i class="fas fa-play"></i>';
+  }
+
+  // moves to the next track
+  function nextTrack() {
+      if (track_index < track_list.length - 1)
+          track_index += 1;
+      else track_index = 0;
+      loadTrack(track_index);
+      playTrack();
+  }
+
+  // moves to the previous track
+  function prevTrack() {
+      if (track_index > 0)
+          track_index -= 1;
+      else track_index = track_list.length;
+      loadTrack(track_index);
+      playTrack();
+  }
+
+  // seeker slider
+  function seekTo() {
+      seekto = curr_track.duration * (seek_slider.value / 100);
+      curr_track.currentTime = seekto;
+  }
+
+  function seekUpdate() {
+      let seekPosition = 0;
+      
+      // check if the current track duration is a legible number
+      if (!isNaN(curr_track.duration)) {
+          seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+          seek_slider.value = seekPosition;
+          
+      // calculate the time left and the total duration
+      let currentMinutes = Math.floor(curr_track.currentTime / 60);
+      let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+      let durationMinutes = Math.floor(curr_track.duration / 60);
+      let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+          
+      // adding a zero to the single digit time values
+      if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
+      if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
+      if (currentMinutes < 10) { currentMinutes = currentMinutes; }
+      if (durationMinutes < 10) { durationMinutes = durationMinutes; }
+
+      curr_time.textContent = currentMinutes + ":" + currentSeconds;
+      total_duration.textContent = durationMinutes + ":" + durationSeconds;
+    }
+  }
+  
+  // load the first track in the tracklist
+  loadTrack(track_index);
+</script>
+     
+
+</body>
+</html>

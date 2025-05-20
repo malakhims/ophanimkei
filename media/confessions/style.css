@@ -1,0 +1,71 @@
+
+  p {
+      font-family: neucha_regular;
+      font-size: 19px;
+      width:490px;
+      margin-left:2px;
+  }
+
+  .header 
+  {
+      width: 740px;
+  }
+
+  .wrap
+  {
+      width: 740px;
+      height: 510px;
+  }
+
+  .flex
+  {
+      display: flex;
+  }
+   
+  .sidebar
+  {
+      height:500px;
+  }
+
+  .yaoicontent
+  {
+  
+  overflow-y: auto;
+  height: 510px;
+  width: 500px;
+  z-index: 10;
+  background-image: url(/images/notebook2.webp);
+  }
+
+  .yaoi
+  {
+
+  width:500px;
+  font-size: 100%;
+  margin-left: 4px;
+  margin-top:-7px;
+  z-index: 6;
+
+  }
+
+  .lemons
+  {
+      height: 700px;
+  }
+
+  .navbar
+  {
+      width:120px;
+      position: absolute;
+      margin-top:280px;
+      margin-left:70px;
+      z-index: 16;
+  } 
+
+  .navbar img:hover {
+      opacity: .73;
+  }
+  
+  .center {
+      margin-right: 5%;
+  }

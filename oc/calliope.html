@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>    
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <title>calliope</title>
+  <link rel="icon" href="ophanimkei.com/images/favicon.webp">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all"> 
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <meta name="description" content="sweets... petticoats... soft voices">
+  <meta name="theme-color" content=#ffabe6>
+  <meta property="og:site_name" content="ophanimkei">
+  <meta property="twitter:image:src" content="">
+  <meta name="twitter:site" content="ophanimkei.com">
+  <meta name="twitter:creator" content="ophanim">
+  <meta name="twitter:title" content="calliope">
+  <meta name="twitter:description" content="sweets... petticoats... soft voices">
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="/style.css" rel="stylesheet" type="text/css" media="all"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <style>
+
+          
+    body {
+      background-image: url(/images/callibg.webp);
+      background-size: 400px;
+      color: black;
+      background-repeat: repeat;
+      background-attachment:fixed;
+      font-family: 'Adabelle';
+      font-size: 25px;
+    }
+
+    h1 {
+      color: rgb(255, 207, 207);
+      font-family: Adorable Doll;
+      text-shadow: 2px 2px 0px #8b7676; /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+      font-size: 40px;
+      margin-bottom: 0px;
+    }
+
+    .number-font {
+    font-family: 'Dadhand';
+    font-size: 17px;
+     }
+
+
+    /*library css now oc css but i'm not changing the name*/
+    .library
+    {
+    height: 564px;
+    width: 434px;
+    margin-top: 20px;
+    line-height:1.5em;
+    margin-bottom: 2px;
+    z-index:0;  
+    overflow-y: auto;
+    background-image: url(/images/calliopeframe.webp);
+  }
+
+  .library2
+    {
+    height: 564px;
+    width: 434px;
+    margin-top: 20px;
+    line-height:1.5em;
+    margin-bottom: 2px;
+    z-index:1;  
+    overflow-y: auto;
+    background-image: url(/images/calliopeframe2.webp);
+  }
+
+    #musicplayer{
+    display:grid;
+    grid-template-columns:20px auto;
+    align-items:center;
+    width: 200px;
+    
+    font-size:20px;
+    line-height:140%;
+    
+    background:white;
+    
+    border: 3px double black;
+    border-radius: 10px;
+    
+    }
+    
+    #musictitle{
+    overflow: hidden;
+    white-space: nowrap;
+    display:inline-block;
+    width: calc(100% - 10px - 1px);
+    margin-left: calc(10px + 1px);
+    }
+    
+    #musicpixel{
+    width:100%;
+    padding:5px;
+    position:relative;
+    min-height: 20px;
+    border-right: 1px solid black;
+    }
+    
+    
+    .overlay {
+    opacity:0;
+    position:absolute;
+    top:0;
+    left:0;
+    text-align:center;
+    width:100%;
+    height:100%;
+    transition:0.3s ease;
+    background:white;
+    }
+    
+    #musicplayer:hover .overlay {
+    opacity: 1;
+    transition:0.3s ease;
+    }
+    
+    .playpause{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
+    .playpause:hover{
+    cursor:help;
+    }
+    
+    #musicpixel img{
+    display:block;
+    }
+    
+    .marquee{
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 5s linear infinite;
+    }
+    
+    @keyframes marquee{
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+    }
+
+    .innercontainer {
+    height: 360px;
+    width: 224px;
+    margin-top: 110px;
+    margin-left: 110px;
+    overflow-y: auto;
+  }
+
+  .toplace {
+  pointer-events: none;
+  width: 100%;
+  height: 190px;
+  position: fixed;
+  right: 0px;
+  margin-top: -70px;
+  top: 0px;
+  background-size: 100px;
+  background: url(/images/doubleruffleSml2.png) repeat left top;
+  z-index: 5;
+}
+
+.bottomlace {
+  pointer-events: none;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  background-size: 100px;
+  background: url(/images/doubleruffleSml.png) repeat left top;
+  z-index: 6;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+<div class="toplace"></div>
+
+<div id='musicplayer'>
+<div id='musicpixel'>
+<img src='https://64.media.tumblr.com/4b8b5edeb93a938b40814b1dd867833c/tumblr_inline_msbtvcHwwB1rkldve.gif'>
+<div class='overlay'>
+  <div class='playpause'><i class="fas fa-play"></i></div>
+</div>
+</div>
+<div id='musictitle'>
+<span class='marquee'>Girl Anachronism - The Dresden Dolls</span>
+</div>
+</div>
+
+<audio id='musicsrc' loop src=https://file.garden/ZSDSOgh9SRsD-cS9/02%20-%20Girl%20Anachronism.flac></audio>
+
+<div style="display:flex;width:895px;margin:auto;margin-top: 10px;">
+<div class="library">
+    <div class="innercontainer">
+        Calliope is a girl who loves sweet things. She's never grew out of her love for unicorns, frilly socks, bunnies in dresses which drew her to sweet lolita fashion. 
+        <br><br>
+        She grew up loved by her family a lot. She has younger siblings who adore her, and her parents tried to give her everything she wanted as a child. When Calliope realized she was a girl, her parents made her feel like a princess.
+        <br><br>
+        Outside of her home, always minded her business. People would spread rumors about her because of her complete lack of interest in socializing and her cold responses when spoken to. She didn't care though. Calliope just felt very disconnected from her everyone around her. In middle school, she found solace online and met another trans girl named Eleanor.
+        <br><br>
+        Meeting Eleanor resulted in her exterior softening. The world gained more color for her, and she became a much nicer person, the kind of person she hoped Eleanor could love. They planned to go to the same college and finally meet. By the time this happened, Calliope had become her ideal self, or at least the self she'd made to be loved by Eleanor. Eleanor was a mentally ill mess but she didn't mind.
+        <br><br>
+        Eleanor and Calliope hope to graduate together and leave the dead planet they're on.         
+
+</div>
+</div>
+<div class="library2">
+
+</div>
+
+</div>
+
+<div class="bottomlace"></div>
+</body>
+
+
+<script>
+document.querySelector('.playpause').addEventListener('click', playpause);
+
+function playpause(){
+if(document.querySelector('.playpause').innerHTML == '<i class="fas fa-play"></i>'){
+  document.querySelector('#musicsrc').play();
+  document.querySelector('.playpause').innerHTML = '<i class="fas fa-pause"></i>';
+} else{
+  document.querySelector('#musicsrc').pause();
+  document.querySelector('.playpause').innerHTML = '<i class="fas fa-play"></i>';
+}
+
+}
+</script>
+
+
+</html>

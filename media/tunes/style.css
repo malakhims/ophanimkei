@@ -1,0 +1,161 @@
+body {
+    background-image: url('/images/mgbg.webp');
+    background-size: 40%;
+    overflow-y:auto;
+    font-family: basis33;
+    
+}
+
+h1 {
+    font-size: 40px;
+    font-family: basis33;
+}
+
+::-webkit-scrollbar {
+width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 3px
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: url('/images/machinegirl.webp');
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: url('/images/machinegirl.webp');
+}    
+
+.machinegirl {
+z-index: 1;
+color: yellow;
+background-color: black;
+border-style:ridge;
+border-width: 5px;
+padding-bottom: 15px;
+margin-left: auto;
+margin-right: auto;
+width: 577px;
+border-color: rgb(222, 255, 90);
+line-height: 1.5em;
+margin-bottom: 2px;
+padding-right: 5px;
+padding-left: 5px;
+background-image:url(/images/textures/marb123.jpg);
+font-size: large;
+}
+
+.machinegirl a {
+    color: orange;
+}
+
+.machinegirl a:visited {
+    color: orange;
+}
+
+.topper{
+z-index: 1;
+color: yellow;
+border-style:ridge;
+border-width: 5px;
+padding-bottom: 15px;
+margin-left: auto;
+margin-right: auto;
+width: 587px;
+height: 130px;
+border-color: rgb(222, 255, 90);
+line-height: 1.5em;
+margin-bottom: 2px;
+margin-top:50px;
+background-image:url(/images/textures/marb123.jpg);
+padding-top:7px;
+}
+
+.navbar {
+    background: linear-gradient(#ff7e28, #ffdb8e);
+    width: 98%;
+    margin: auto;
+    color: black;
+}
+
+.albums
+{
+    margin-left:25px;
+    width:577px;
+}
+
+.albums img {
+    height: 150px;
+}
+
+
+.album-container {
+    position: relative;
+    display: inline-block; /* Keep images inline */
+}
+
+.album-container img {
+    padding: 10px;
+    transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+.album-container img:hover {
+    filter: brightness(70%); /* Slightly dims the image */
+}
+
+/* Add alt text as an overlay */
+.album-container:hover::after {
+    content: attr(data-alt); /* Use a custom attribute */
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    outline: black 2px;
+    white-space: nowrap; /* Prevents wrapping */
+    z-index: 999; /* Ensure text appears above the image */
+    pointer-events: none; /* Avoid interference with hover */
+}
+
+.navbar-container {
+    position: relative;
+    display: inline-block; /* Keep images inline */
+    margin-top:-60px;
+    margin-left:14px;
+}
+
+.navbar-container img {
+    transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+.navbar-container img:hover {
+    filter: brightness(70%); /* Slightly dims the image */
+}
+
+/* Add alt text as an overlay */
+.navbar-container:hover::after {
+    content: attr(data-alt); /* Use a custom attribute */
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    outline: black 2px;
+    white-space: nowrap; /* Prevents wrapping */
+    z-index: 999; /* Ensure text appears above the image */
+    pointer-events: none; /* Avoid interference with hover */
+}

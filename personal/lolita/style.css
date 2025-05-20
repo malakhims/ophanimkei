@@ -1,0 +1,56 @@
+body {
+    background-image: url(https://i.pinimg.com/564x/dc/af/cb/dcafcbe6aec64a0d70fbf71bb8b6b30c.jpg);
+    background-size: 420px;
+    background-color: #1e1e14;
+    color: rgb(53, 53, 53);
+    font-family: 'Times New Roman', Times, serif;
+    font-size:20px;
+    }
+
+  @font-face {
+  font-family: Adorable Doll;
+  src: url(/fonts/AdorableDoll.ttf);
+  }
+
+  @font-face {
+    font-family: yujisyuku;
+    src: url(/fonts/YujiSyuku-Regular.ttf);
+  }
+
+  a, h1, h2, h3 {
+      color: rgb(59, 58, 50);
+      text-decoration: none;
+      font-family: Adorable Doll;
+      
+  }
+
+  h1, h2 {
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #747474, -1px 1px 0 #000, 1px 1px 0 #4f4747;   
+  }
+  a:hover {
+      color: rgb(47, 41, 41);
+  }
+
+  .centercontainer {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  }
+
+.box05{
+  background:url(/images/back01.png);
+  border:1px dashed #614a44;
+  box-sizing:border-box;
+  margin:1em 0; /* 中央寄せは0をautoに変更 */
+  padding:20px;
+  width:800px;
+  }
+  .box-inner{
+  background:url(/images/back02.png);
+  border:1px dashed #614a44;
+  padding:20px
+  }
+
+  .shadow {
+    filter: drop-shadow(1px 1px 0 rgba(126, 122, 118, 0.663)) drop-shadow(-1px 1px 0 rgba(126, 122, 118, 0.663)) drop-shadow(0 2px 0 rgba(126, 122, 118, 0.663)) drop-shadow(0 -1px 0 rgba(126, 122, 118, 0.663)) drop-shadow(0 1px 1.5px rgba(126, 122, 118, 0.663)) drop-shadow(0 -1px 1.5px rgba(126, 122, 118, 0.663)) drop-shadow(1px -1px 1.5px rgba(126, 122, 118, 0.663)) drop-shadow(-1px -1px 1.5px rgba(126, 122, 118, 0.663));
+    }

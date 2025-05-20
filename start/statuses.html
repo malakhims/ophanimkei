@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base target="_parent">
+<link href="/style.css" rel="stylesheet" type="text/css" media="all">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://boothworldindustries.neocities.org/webrings/splatnet/Styles/25fryesplatnet.css">
+<link rel="stylesheet" href="https://rainbowmango.neocities.org/viva-pinata/onionring.css">
+<script>
+if(window.self !== window.top);
+else window.location = "/index.html#statuses"
+</script>
+<style>
+    .post{
+background:#fff;
+border:2px solid #ec9590;
+box-sizing:border-box;
+margin:1em 0; /* 中央寄せは0をautoに変更 */
+padding:1em;
+position:relative;
+width:96%
+}
+.post::before,.posts::after{
+border:8px solid transparent;
+content:'';
+left:30px; /* 三角の位置 */
+position:absolute;
+top:100%
+}
+.post::before{
+border-top:8px solid #ec9590;
+}
+.post::after{
+border-top:8px solid #fff;
+margin-top:-3px;
+}
+
+.post img {
+height:23px;
+}
+</style>
+</head>
+<body>
+        <div class="content">
+            
+                <div class="posts" id="posts">
+
+                </div>
+            </div>
+        
+
+
+         <script src="/js/fedi.js"></script>
+
+    </body>
+</html>
